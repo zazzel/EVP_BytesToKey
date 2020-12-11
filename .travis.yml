@@ -1,4 +1,7 @@
 sudo: false
+arch:
+  - amd64
+  - ppc64le
 language: node_js
 node_js:
   - "0.12"
@@ -23,5 +26,5 @@ matrix:
     - node_js: "6"
       env: TEST_SUITE=lint
 before_script:
-  - npm run test:prepare
+    - npm run test:prepare
 script: npm run-script $TEST_SUITE
